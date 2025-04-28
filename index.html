@@ -11,45 +11,32 @@
 
 </head>
 <body>
-<div>
-  <p class="font-heading">Poppins</p>
-  <p class="font-open-sans font-bold">Poppins bold = 700</p>
-  <p>Poppins</p>
-  <p>default: Open Sans</p>
-  <p class="font-semibold">Open Sans semibold - 600</p>
-  <p class="font-bold">Open Sans bold = 700</p>
-  <div>
-    <div class="size-12 bg-hdl-pink"></div>
-    <div class="size-12 bg-hdl-light-pink"></div>
-    <div class="size-12 bg-hdl-red"></div>
-    <div class="size-12 bg-hdl-dark-cyan"></div>
-    <div class="size-12 bg-hdl-light-blue"></div>
-  </div>
-</div>
-<header>
-  <img src="./images/logo.svg" alt="">
-  <button class="" type="button">Try it free</button>
+<header class="mt-5 mx-5 flex items-center justify-between">
+  <img class="h-4" src="./images/logo.svg" alt="">
+  <button class="border border-hdl-light-pink rounded-full shadow shadow-hdl-light-pink/50 px-4 py-0.75 text-hdl-light-pink text-xs font-semibold" type="button">Try it free</button>
 </header>
-<main>
-  <section>
+<main class="mt-30 text-hdl-dark-cyan">
+  <section class="mx-5">
     <section>
-      <h1>Build The Community Your Fans Will Love</h1>
-      <p>
+      <h1 class="font-heading font-bold text-2xl/9 text-center lg:text-4xl">Build The Community <br class="md:hidden"> Your Fans Will Love</h1>
+      <p class="text-center text-sm pt-6 px-5 pb-12 max-w-prose mx-auto">
       Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.
       </p>
-      <button class="" type="button">Get Started For Free</button>
-      <img src="./images/screen-mockups.svg" alt="">
+      <button class="block bg-hdl-pink rounded-full shadow-md px-10 py-3 text-hdl-light-blue text-xs font-semibold mx-auto" type="button">Get Started For Free</button>
     </section>
-    <section>
-      <div>
-        <img src="./images/icon-communities.svg" alt="">
-        <p>1.4k+</p>
-        <p>Communities Formed</p>
+    <section class="pt-24 px-4">
+      <img class="w-full h-full object-cover max-w-sm" src="./images/screen-mockups.svg" alt="">
+    </section>
+    <section class="grid place-content-center gap-20 pt-30">
+      <div class="px-6">
+        <img class="h-7" src="./images/icon-communities.svg" alt="">
+        <p class="text-[3.5rem] font-bold">1.4k+</p>
+        <p class="pt-2 text-hdl-dark-cyan/50 text-sm tracking-[0.01em]">Communities Formed</p>
       </div>
-      <div>
-        <img src="./images/icon-messages.svg" alt="">
-        <p>2.7m+</p>
-        <p>Messages Sent</p>
+      <div class="px-6">
+        <img class="w-6" src="./images/icon-messages.svg" alt="">
+        <p class="text-[3.5rem] font-bold">2.7m+</p>
+        <p class="pt-2 text-hdl-dark-cyan/50 text-sm tracking-[0.01em] text-center">Messages <br class="md:hidden"> Sent</p>
       </div>
     </section>
   </section>
@@ -58,16 +45,16 @@
       <source srcset="./images/bg-section-top-desktop-1.svg" media="(min-width: 640px)">
       <img class="w-full h-full object-cover" src="./images/bg-section-top-mobile-1.svg" alt="">
     </picture>
-    <section class="bg-hdl-light-blue">
-      <div>
-        <h2>Grow Together</h2>
-        <p>
-          Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
-        </p>
-      </div>
+    <section class="bg-hdl-light-blue pt-20 grid gap-20 px-10 place-content-center">
       <picture>
         <img class="w-full h-full object-cover" src="./images/illustration-grow-together.svg" alt="">
       </picture>
+      <div>
+        <h2 class="font-heading font-bold text-xl lg:text-3xl text-center">Grow Together</h2>
+        <p class="pt-5 text-sm text-center">
+          Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
+        </p>
+      </div>
     </section>
     <picture>
       <source srcset="./images/bg-section-bottom-desktop-1.svg" media="(min-width: 640px)">
@@ -80,7 +67,7 @@
         <img class="w-full h-full object-cover" src="./images/illustration-flowing-conversation.svg" alt="">
       </picture>
       <div>
-        <h2>Flowing Conversations</h2>
+        <h2 class="font-heading font-bold lg:text-3xl">Flowing Conversations</h2>
         <p>
           You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.
         </p>
@@ -94,7 +81,7 @@
     </picture>
     <section class="bg-hdl-light-blue">
       <div>
-        <h2>Your Users</h2>
+        <h2 class="font-heading font-bold lg:text-3xl">Your Users</h2>
         <p>
           It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.
         </p>
@@ -109,8 +96,8 @@
     </picture>
   </section>
   <section>
-    <h2>Ready To Build Your Community?</h2>
-    <button class="" type="button">Get Started For Free</button>
+    <h2 class="font-heading font-bold lg:text-3xl">Ready To Build Your Community?</h2>
+    <button class="font-semibold" type="button">Get Started For Free</button>
   </section>
 </main>
   <footer>
@@ -130,14 +117,14 @@
         </address>
       </div>
       <div>
-        <h3>Newsletter</h3>
+        <h3 class="font-bold uppercase">Newsletter</h3>
         <p>
           To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
         </p>
         <form action="">
           <input type="email">
           <span>Check your email please</span>
-          <button type="submit">Subscribe</button>
+          <button class="font-semibold" type="submit">Subscribe</button>
         </form>
       </div>
     </section>
