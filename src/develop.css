@@ -12,5 +12,9 @@
 	--color-hdl-dark-cyan: hsl(192, 100%, 9%);
 	--color-hdl-light-blue: hsl(207, 100%, 98%);
 
+	--color-hdl-blue: hsl(192, 100%, 49%);
+
 	--tracking-hdl: 0.015em;
+
+	--shadow-hdl-glow: 0 0 8px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
