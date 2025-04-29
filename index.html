@@ -6,7 +6,15 @@
 
   <link rel="stylesheet" href="./src/main.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <script defer src="./src/newsletter.js"></script>
+  <!-- Alpine Plugins -->
+  <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Alpine Core -->
+  <script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
+
+
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 
 </head>
@@ -134,19 +142,28 @@
           <p class="text-sm/6 tracking-hdl pb-8 max-w-[22rem] md:tracking-none">
             To receive tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
           </p>
-          <form action="" class="md:flex md:gap-2 md:items-start">
+          <form x-data="signUp()" method="post" class="md:flex md:gap-2 md:items-start">
             <div class="pb-4">
               <input
-                  type="email"
+                  x-model="email"
+                  x-on:input="validate('email')"
+                  x-on:blur="validate('email')"
+                  type="text"
                   name="email"
                   id="email"
                   aria-label="Email"
                   required
-                  class="block w-full rounded-md bg-white px-3 py-3 text-base text-hdl-dark-cyan outline outline-1 -outline-offset-1 outline-hdl-light-blue md:w-xs invalid:outline-hdl-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink sm:text-sm/6 transition-colors ease-in duration-200"
+                  class="block w-full rounded-md bg-white px-3 py-3 text-base text-hdl-dark-cyan outline outline-1 -outline-offset-1 md:w-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink sm:text-sm/6 transition-colors ease-in duration-200"
+                  :class="validation.email.invalid? 'outline-hdl-red' : 'outline-hdl-light-blue'"
               >
-              <p class="mt-2 text-xs tracking-hdl text-hdl-red" id="email-description">Check your email please</p>
+              <p x-show="validation.email.invalid" class="mt-2 text-xs tracking-hdl text-hdl-red" id="email-error-message" x-text="validation.email.message"></p>
             </div>
-            <button class="ms-auto cursor-pointer block bg-hdl-pink rounded-md px-10.5 py-3 font-semibold hover:bg-hdl-light-pink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink transition-colors ease-in duration-200" type="submit">Subscribe</button>
+            <button
+                class="ms-auto cursor-pointer block bg-hdl-pink rounded-md px-10.5 py-3 font-semibold hover:bg-hdl-light-pink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink transition-colors ease-in duration-200"
+                type="submit"
+            >
+              Subscribe
+            </button>
           </form>
         </section>
         <section class="mb-12 md:col-start-1 md:row-start-1 md:mb-0">
