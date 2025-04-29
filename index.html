@@ -135,15 +135,15 @@
       <source srcset="./images/bg-footer-top-desktop.svg" media="(min-width: 640px)">
       <img class="w-full h-full object-cover" src="./images/bg-footer-top-mobile.svg" aria-hidden="true" alt="">
     </picture>
-    <section class="w-full bg-hdl-dark-cyan pb-11 md:pb-26">
-      <section class="text-hdl-light-blue px-7 pt-14 grid md:grid-cols-2 lg:mx-auto lg:max-w-[1340px] xl:pt-30 xl:px-18 xl:gap-x-30 xl:gap-y-16">
-        <section class="pb-26 md:pb-0 lg:ps-4">
+    <section class="w-full bg-hdl-dark-cyan pb-11 lg:pb-26">
+      <section class="text-hdl-light-blue px-7 pt-14 grid gap-6 lg:grid-cols-2 lg:mx-auto lg:max-w-[1340px] xl:pt-30 xl:px-18 xl:gap-x-30 xl:gap-y-16">
+        <section class="pb-26 lg:pb-0 lg:ps-4">
           <h3 class="text-xl font-bold uppercase mb-4 md:text-2xl">Newsletter</h3>
           <p class="text-sm/6 tracking-hdl pb-8 max-w-[22rem] md:tracking-none">
             To receive tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
           </p>
-          <form x-data="signUp()" method="post" class="md:flex md:gap-2 md:items-start">
-            <div class="pb-4">
+          <form x-data="signUp()" method="post" class="md:flex md:gap-4 md:items-start">
+            <div class="pb-4 w-full">
               <input
                   x-model="email"
                   x-on:input="validate('email')"
@@ -153,7 +153,7 @@
                   id="email"
                   aria-label="Email"
                   required
-                  class="block w-full rounded-md bg-white px-3 py-3 text-base text-hdl-dark-cyan outline outline-1 -outline-offset-1 md:w-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink sm:text-sm/6 transition-colors ease-in duration-200"
+                  class="block w-full rounded-md bg-white px-3 py-3 text-base text-hdl-dark-cyan outline outline-1 -outline-offset-1 lg:w-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hdl-pink sm:text-sm/6 transition-colors ease-in duration-200"
                   :class="validation.email.invalid? 'outline-hdl-red' : 'outline-hdl-light-blue'"
               >
               <p x-show="validation.email.invalid" class="mt-2 text-xs tracking-hdl text-hdl-red" id="email-error-message" x-text="validation.email.message"></p>
@@ -166,7 +166,7 @@
             </button>
           </form>
         </section>
-        <section class="mb-12 md:col-start-1 md:row-start-1 md:mb-0">
+        <section class="mb-12 md:col-start-1 md:row-start-1 lg:mb-0">
           <img class="h-8 md:h-6 lg:h-10" src="./images/logo_for_dark_bg.svg" alt="Huddle">
           <p class="text-sm/6 tracking-hdl pt-4 pb-9 max-w-xs lg:pt-6 lg:pb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
